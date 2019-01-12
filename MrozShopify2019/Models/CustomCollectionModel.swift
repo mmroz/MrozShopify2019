@@ -22,9 +22,6 @@ public struct CustomCollectionModel {
     public var templateSuffix: String
     public var publishedScope: String
     public var adminGraphqlApiId: String
-    
-    // TODO - how to cache this
-    
     public var image : ImageModel
     
     // MARK: - Initialize

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		E48F0A8C21EA4AD2007BCEF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48F0A8B21EA4AD2007BCEF0 /* AppDelegate.swift */; };
-		E48F0A8E21EA4AD2007BCEF0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48F0A8D21EA4AD2007BCEF0 /* ViewController.swift */; };
 		E48F0A9121EA4AD2007BCEF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E48F0A8F21EA4AD2007BCEF0 /* Main.storyboard */; };
 		E48F0A9421EA4AD2007BCEF0 /* MrozShopify2019.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E48F0A9221EA4AD2007BCEF0 /* MrozShopify2019.xcdatamodeld */; };
 		E48F0A9621EA4AD3007BCEF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E48F0A9521EA4AD3007BCEF0 /* Assets.xcassets */; };
@@ -23,6 +22,9 @@
 		E48F0AC921EA629B007BCEF0 /* ProductVariantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48F0AC821EA629B007BCEF0 /* ProductVariantModel.swift */; };
 		E48F0ACB21EA6F00007BCEF0 /* ProductOptionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48F0ACA21EA6F00007BCEF0 /* ProductOptionModel.swift */; };
 		E48F0ACD21EA70FA007BCEF0 /* ProductImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48F0ACC21EA70FA007BCEF0 /* ProductImageModel.swift */; };
+		E48F0AD021EA84D7007BCEF0 /* AppStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48F0ACF21EA84D7007BCEF0 /* AppStoryboard.swift */; };
+		E48F0AD221EA85B7007BCEF0 /* UIViewController+StoryboardID.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48F0AD121EA85B7007BCEF0 /* UIViewController+StoryboardID.swift */; };
+		E48F0AD621EA8CD5007BCEF0 /* CustomCollectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48F0AD521EA8CD5007BCEF0 /* CustomCollectionTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +47,6 @@
 /* Begin PBXFileReference section */
 		E48F0A8821EA4AD2007BCEF0 /* MrozShopify2019.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MrozShopify2019.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E48F0A8B21EA4AD2007BCEF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E48F0A8D21EA4AD2007BCEF0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E48F0A9021EA4AD2007BCEF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E48F0A9321EA4AD2007BCEF0 /* MrozShopify2019.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MrozShopify2019.xcdatamodel; sourceTree = "<group>"; };
 		E48F0A9521EA4AD3007BCEF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -65,6 +66,9 @@
 		E48F0AC821EA629B007BCEF0 /* ProductVariantModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductVariantModel.swift; sourceTree = "<group>"; };
 		E48F0ACA21EA6F00007BCEF0 /* ProductOptionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductOptionModel.swift; sourceTree = "<group>"; };
 		E48F0ACC21EA70FA007BCEF0 /* ProductImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductImageModel.swift; sourceTree = "<group>"; };
+		E48F0ACF21EA84D7007BCEF0 /* AppStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoryboard.swift; sourceTree = "<group>"; };
+		E48F0AD121EA85B7007BCEF0 /* UIViewController+StoryboardID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+StoryboardID.swift"; sourceTree = "<group>"; };
+		E48F0AD521EA8CD5007BCEF0 /* CustomCollectionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,10 +119,14 @@
 		E48F0A8A21EA4AD2007BCEF0 /* MrozShopify2019 */ = {
 			isa = PBXGroup;
 			children = (
-				E48F0AC521EA53DF007BCEF0 /* Constants */,
-				E48F0ABC21EA4AD8007BCEF0 /* Model */,
 				E48F0A8B21EA4AD2007BCEF0 /* AppDelegate.swift */,
-				E48F0A8D21EA4AD2007BCEF0 /* ViewController.swift */,
+				E48F0ACF21EA84D7007BCEF0 /* AppStoryboard.swift */,
+				E48F0ACE21EA8479007BCEF0 /* Extensions */,
+				E48F0AC521EA53DF007BCEF0 /* Constants */,
+				E48F0ABC21EA4AD8007BCEF0 /* Models */,
+				E48F0AD321EA8B36007BCEF0 /* Views */,
+				E48F0AD421EA8B50007BCEF0 /* Controllers */,
+				E48F0AD721EA8DAE007BCEF0 /* Networking */,
 				E48F0A8F21EA4AD2007BCEF0 /* Main.storyboard */,
 				E48F0A9521EA4AD3007BCEF0 /* Assets.xcassets */,
 				E48F0A9721EA4AD3007BCEF0 /* LaunchScreen.storyboard */,
@@ -146,7 +154,7 @@
 			path = MrozShopify2019UITests;
 			sourceTree = "<group>";
 		};
-		E48F0ABC21EA4AD8007BCEF0 /* Model */ = {
+		E48F0ABC21EA4AD8007BCEF0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				E48F0ABF21EA4B80007BCEF0 /* CollectModel.swift */,
@@ -157,7 +165,7 @@
 				E48F0ACA21EA6F00007BCEF0 /* ProductOptionModel.swift */,
 				E48F0ACC21EA70FA007BCEF0 /* ProductImageModel.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		E48F0AC521EA53DF007BCEF0 /* Constants */ = {
@@ -166,6 +174,36 @@
 				E48F0AC621EA53EC007BCEF0 /* Constants.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		E48F0ACE21EA8479007BCEF0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E48F0AD121EA85B7007BCEF0 /* UIViewController+StoryboardID.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E48F0AD321EA8B36007BCEF0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E48F0AD421EA8B50007BCEF0 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E48F0AD521EA8CD5007BCEF0 /* CustomCollectionTableViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E48F0AD721EA8DAE007BCEF0 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,11 +341,13 @@
 				E48F0ACD21EA70FA007BCEF0 /* ProductImageModel.swift in Sources */,
 				E48F0AC021EA4B80007BCEF0 /* CollectModel.swift in Sources */,
 				E48F0AC221EA501F007BCEF0 /* ProductModel.swift in Sources */,
+				E48F0AD621EA8CD5007BCEF0 /* CustomCollectionTableViewController.swift in Sources */,
+				E48F0AD021EA84D7007BCEF0 /* AppStoryboard.swift in Sources */,
 				E48F0A9421EA4AD2007BCEF0 /* MrozShopify2019.xcdatamodeld in Sources */,
 				E48F0AC721EA53EC007BCEF0 /* Constants.swift in Sources */,
 				E48F0AC921EA629B007BCEF0 /* ProductVariantModel.swift in Sources */,
+				E48F0AD221EA85B7007BCEF0 /* UIViewController+StoryboardID.swift in Sources */,
 				E48F0ABE21EA4AEA007BCEF0 /* CustomCollectionModel.swift in Sources */,
-				E48F0A8E21EA4AD2007BCEF0 /* ViewController.swift in Sources */,
 				E48F0A8C21EA4AD2007BCEF0 /* AppDelegate.swift in Sources */,
 				E48F0AC421EA53BC007BCEF0 /* ImageModel.swift in Sources */,
 			);
