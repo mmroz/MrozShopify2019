@@ -15,6 +15,14 @@
 		E48F0A9921EA4AD3007BCEF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E48F0A9721EA4AD3007BCEF0 /* LaunchScreen.storyboard */; };
 		E48F0AA421EA4AD3007BCEF0 /* MrozShopify2019Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48F0AA321EA4AD3007BCEF0 /* MrozShopify2019Tests.swift */; };
 		E48F0AAF21EA4AD3007BCEF0 /* MrozShopify2019UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48F0AAE21EA4AD3007BCEF0 /* MrozShopify2019UITests.swift */; };
+		E48F0ABE21EA4AEA007BCEF0 /* CustomCollectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48F0ABD21EA4AEA007BCEF0 /* CustomCollectionModel.swift */; };
+		E48F0AC021EA4B80007BCEF0 /* CollectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48F0ABF21EA4B80007BCEF0 /* CollectModel.swift */; };
+		E48F0AC221EA501F007BCEF0 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48F0AC121EA501F007BCEF0 /* ProductModel.swift */; };
+		E48F0AC421EA53BC007BCEF0 /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48F0AC321EA53BC007BCEF0 /* ImageModel.swift */; };
+		E48F0AC721EA53EC007BCEF0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48F0AC621EA53EC007BCEF0 /* Constants.swift */; };
+		E48F0AC921EA629B007BCEF0 /* ProductVariantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48F0AC821EA629B007BCEF0 /* ProductVariantModel.swift */; };
+		E48F0ACB21EA6F00007BCEF0 /* ProductOptionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48F0ACA21EA6F00007BCEF0 /* ProductOptionModel.swift */; };
+		E48F0ACD21EA70FA007BCEF0 /* ProductImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48F0ACC21EA70FA007BCEF0 /* ProductImageModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +57,14 @@
 		E48F0AAA21EA4AD3007BCEF0 /* MrozShopify2019UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MrozShopify2019UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E48F0AAE21EA4AD3007BCEF0 /* MrozShopify2019UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MrozShopify2019UITests.swift; sourceTree = "<group>"; };
 		E48F0AB021EA4AD3007BCEF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E48F0ABD21EA4AEA007BCEF0 /* CustomCollectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionModel.swift; sourceTree = "<group>"; };
+		E48F0ABF21EA4B80007BCEF0 /* CollectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectModel.swift; sourceTree = "<group>"; };
+		E48F0AC121EA501F007BCEF0 /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
+		E48F0AC321EA53BC007BCEF0 /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
+		E48F0AC621EA53EC007BCEF0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E48F0AC821EA629B007BCEF0 /* ProductVariantModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductVariantModel.swift; sourceTree = "<group>"; };
+		E48F0ACA21EA6F00007BCEF0 /* ProductOptionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductOptionModel.swift; sourceTree = "<group>"; };
+		E48F0ACC21EA70FA007BCEF0 /* ProductImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductImageModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +115,8 @@
 		E48F0A8A21EA4AD2007BCEF0 /* MrozShopify2019 */ = {
 			isa = PBXGroup;
 			children = (
+				E48F0AC521EA53DF007BCEF0 /* Constants */,
+				E48F0ABC21EA4AD8007BCEF0 /* Model */,
 				E48F0A8B21EA4AD2007BCEF0 /* AppDelegate.swift */,
 				E48F0A8D21EA4AD2007BCEF0 /* ViewController.swift */,
 				E48F0A8F21EA4AD2007BCEF0 /* Main.storyboard */,
@@ -126,6 +144,28 @@
 				E48F0AB021EA4AD3007BCEF0 /* Info.plist */,
 			);
 			path = MrozShopify2019UITests;
+			sourceTree = "<group>";
+		};
+		E48F0ABC21EA4AD8007BCEF0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E48F0ABF21EA4B80007BCEF0 /* CollectModel.swift */,
+				E48F0ABD21EA4AEA007BCEF0 /* CustomCollectionModel.swift */,
+				E48F0AC121EA501F007BCEF0 /* ProductModel.swift */,
+				E48F0AC321EA53BC007BCEF0 /* ImageModel.swift */,
+				E48F0AC821EA629B007BCEF0 /* ProductVariantModel.swift */,
+				E48F0ACA21EA6F00007BCEF0 /* ProductOptionModel.swift */,
+				E48F0ACC21EA70FA007BCEF0 /* ProductImageModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E48F0AC521EA53DF007BCEF0 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				E48F0AC621EA53EC007BCEF0 /* Constants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,9 +299,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E48F0ACB21EA6F00007BCEF0 /* ProductOptionModel.swift in Sources */,
+				E48F0ACD21EA70FA007BCEF0 /* ProductImageModel.swift in Sources */,
+				E48F0AC021EA4B80007BCEF0 /* CollectModel.swift in Sources */,
+				E48F0AC221EA501F007BCEF0 /* ProductModel.swift in Sources */,
 				E48F0A9421EA4AD2007BCEF0 /* MrozShopify2019.xcdatamodeld in Sources */,
+				E48F0AC721EA53EC007BCEF0 /* Constants.swift in Sources */,
+				E48F0AC921EA629B007BCEF0 /* ProductVariantModel.swift in Sources */,
+				E48F0ABE21EA4AEA007BCEF0 /* CustomCollectionModel.swift in Sources */,
 				E48F0A8E21EA4AD2007BCEF0 /* ViewController.swift in Sources */,
 				E48F0A8C21EA4AD2007BCEF0 /* AppDelegate.swift in Sources */,
+				E48F0AC421EA53BC007BCEF0 /* ImageModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
