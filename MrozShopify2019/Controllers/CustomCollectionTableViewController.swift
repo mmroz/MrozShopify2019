@@ -23,32 +23,6 @@ class CustomCollectionTableViewController: UITableViewController {
         initialize()
     }
     
-    // MARK: - Private Methods
-    
-    /// Initializes the views and data
-    private func initialize() {
-        initializeCustomCollections()
-    }
-    
-    /// Initializes the the customCollectionsArray and reloads the table view
-    /// - Parameters:
-    ///   - pageNumber: The page to query defaults to page 1
-    private func initializeCustomCollections(pageNumber: Int = 1) {
-        networkManager.getCustomCollections(page: pageNumber) { (customCollections, error) in
-            if error != nil {
-                return
-            }
-            
-            if let customCollections = customCollections {
-                self.customCollectionArray = customCollections
-                
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
-                }
-            }
-        }
-    }
-    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -69,6 +43,7 @@ class CustomCollectionTableViewController: UITableViewController {
         if let image = imageCache[customCollection] {
             cell.imageView?.image = image
         } else {
+            cell.imageView?.image = UIImage.init(named: "PicturePlaceholder")
             imageLibrary.image(at: customCollection.image.src) { (image, error) in
                 self.imageCache[customCollection] = image
                 cell.imageView?.image = image
@@ -99,6 +74,38 @@ class CustomCollectionTableViewController: UITableViewController {
             detailVC.collectionImage = imageCache[customCollection]
             
             navigationController.pushViewController(detailVC, animated: true)
+        }
+    }
+    
+    // MARK: - Private Methods
+    
+    /// Initializes the views and data
+    private func initialize() {
+        initializeNavBar()
+        initializeCustomCollections()
+    }
+    
+    /// Initializes the Nav Bar
+    private func initializeNavBar() {
+        self.title = "Collections"
+    }
+    
+    /// Initializes the the customCollectionsArray and reloads the table view
+    /// - Parameters:
+    ///   - pageNumber: The page to query defaults to page 1
+    private func initializeCustomCollections(pageNumber: Int = 1) {
+        networkManager.getCustomCollections(page: pageNumber) { (customCollections, error) in
+            if error != nil {
+                return
+            }
+            
+            if let customCollections = customCollections {
+                self.customCollectionArray = customCollections
+                
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            }
         }
     }
 }
