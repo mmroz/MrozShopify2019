@@ -43,7 +43,7 @@ extension ProductOptionModel: Decodable {
     
     private enum ProductOptionModelCodingKeys: String, CodingKey {
         case id         = "id"
-        case productId  = "product_Id"
+        case productId  = "product_id"
         case name       = "name"
         case position   = "position"
         case values     = "values"

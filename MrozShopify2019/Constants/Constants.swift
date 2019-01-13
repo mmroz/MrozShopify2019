@@ -17,8 +17,14 @@ public struct Constants {
         return dateFormatter
     }
     
-    /// Cell identifiers used in the project
+    /// All Cell identifier names
     struct CellIdentifiers {
         static let customCollectionCellIdentifier = "CustomCollectionCell"
+        static let productCellIdentifier = "ProductCell"
+    }
+    
+    /// All Nib file names
+    struct Nibs {
+        static let productCellNib = "ProductTableViewCell"
     }
 }

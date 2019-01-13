@@ -29,14 +29,13 @@ public struct ProductVariantModel {
     // TODO - should this int?
     public var grams: Int
     public var imageId: Int?
-    // TODO - should this Decimal?
-    public var weight: Decimal
+    public var weight: Double
     public var weightUnit: UnitMass
     public var inventoryItemId: Int
     public var inventoryQuantity: Int
     public var oldInventoryQuantity: Int
     public var requiresShipping: Bool
-    public var adminGraphqlApiId: String
+    public var adminGraphqlApiId: String?
     
     // MARK: - Initialize
     
@@ -57,13 +56,13 @@ public struct ProductVariantModel {
         barcode: String?,
         grams: Int,
         imageId: Int,
-        weight: Decimal,
+        weight: Double,
         weightUnit: UnitMass,
         inventoryItemId: Int,
         inventoryQuantity: Int,
         oldInventoryQuantity: Int,
         requiresShipping: Bool,
-        adminGraphqlApiId: String
+        adminGraphqlApiId: String?
         ) {
         self.id = id
         self.productId = productId
@@ -120,7 +119,7 @@ extension ProductVariantModel: Decodable {
         case inventoryQuantity = "inventory_quantity"
         case oldInventoryQuantity = "old_inventory_quantity"
         case requiresShipping = "requires_shipping"
-        case adminGraphqlApiId = "admin_graphql_api_Id"
+        case adminGraphqlApiId = "admin_graphql_api_id"
     }
     
     // MARK: - Decodable initalizer
@@ -131,25 +130,25 @@ extension ProductVariantModel: Decodable {
         self.id = try productVariantContainer.decode(Int.self, forKey: .id)
         self.productId = try productVariantContainer.decode(Int.self, forKey: .productId)
         self.title = try productVariantContainer.decode(String.self, forKey: .title)
-        self.price = try productVariantContainer.decode(Decimal.self, forKey: .price)
+        self.price = try Decimal(string: productVariantContainer.decode(String.self, forKey: .price)) ?? 0.0
         self.sku = try productVariantContainer.decode(String.self, forKey: .sku)
         self.position = try productVariantContainer.decode(Int.self, forKey: .position)
         self.inventoryPolicy = try productVariantContainer.decode(String.self, forKey: .inventoryPolicy)
         self.option1 = try productVariantContainer.decode(String.self, forKey: .option1)
-        self.option2 = try productVariantContainer.decode(String.self, forKey: .option2)
-        self.option3 = try productVariantContainer.decode(String.self, forKey: .option3)
+        self.option2 = try productVariantContainer.decode(String?.self, forKey: .option2)
+        self.option3 = try productVariantContainer.decode(String?.self, forKey: .option3)
         self.createdAt = try Constants.httpDateFormat.date(from: productVariantContainer.decode(String.self, forKey: .createdAt)) ?? Date()
         self.updatedAt = try Constants.httpDateFormat.date(from: productVariantContainer.decode(String.self, forKey: .updatedAt)) ?? Date()
         self.taxable = try productVariantContainer.decode(Bool.self, forKey: .taxable)
-        self.barcode = try productVariantContainer.decode(String.self, forKey: .barcode)
+        self.barcode = try productVariantContainer.decode(String?.self, forKey: .barcode)
         self.grams = try productVariantContainer.decode(Int.self, forKey: .grams)
-        self.imageId = try productVariantContainer.decode(Int.self, forKey: .imageId)
-        self.weight = try productVariantContainer.decode(Decimal.self, forKey: .weight)
+        self.imageId = try productVariantContainer.decode(Int?.self, forKey: .imageId)
+        self.weight = try productVariantContainer.decode(Double.self, forKey: .weight)
         self.weightUnit = try UnitMass(symbol: productVariantContainer.decode(String.self, forKey: .weightUnit))
         self.inventoryItemId = try productVariantContainer.decode(Int.self, forKey: .inventoryItemId)
         self.inventoryQuantity = try productVariantContainer.decode(Int.self, forKey: .inventoryQuantity)
         self.oldInventoryQuantity = try productVariantContainer.decode(Int.self, forKey: .oldInventoryQuantity)
         self.requiresShipping = try productVariantContainer.decode(Bool.self, forKey: .requiresShipping)
-        self.adminGraphqlApiId = try productVariantContainer.decode(String.self, forKey: .adminGraphqlApiId)
+        self.adminGraphqlApiId = try productVariantContainer.decode(String?.self, forKey: .adminGraphqlApiId)
     }
 }

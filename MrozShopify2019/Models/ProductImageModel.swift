@@ -85,7 +85,7 @@ extension ProductImageModel: Decodable {
         self.position = try productImageContainer.decode(Int.self, forKey: .position)
         self.createdAt = try Constants.httpDateFormat.date(from: productImageContainer.decode(String.self, forKey: .createdAt)) ?? Date()
         self.updatedAt = try Constants.httpDateFormat.date(from: productImageContainer.decode(String.self, forKey: .updatedAt)) ?? Date()
-        self.alt = try productImageContainer.decode(URL.self, forKey: .alt)
+        self.alt = try productImageContainer.decode(URL?.self, forKey: .alt)
         self.width = try productImageContainer.decode(CGFloat.self, forKey: .width)
         self.height = try productImageContainer.decode(CGFloat.self, forKey: .height)
         self.src = try productImageContainer.decode(URL.self, forKey: .src)

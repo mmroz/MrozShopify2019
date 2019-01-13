@@ -8,23 +8,6 @@
 
 import Foundation
 
-struct CustomCollectionApiResponse {
-    let customCollections: [CustomCollectionModel]
-}
-
-extension CustomCollectionApiResponse: Decodable {
-    
-    private enum CustomCollectionApiResponseCodingKeys: String, CodingKey {
-        case customCollections = "custom_collections"
-    }
-    
-    init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: CustomCollectionApiResponseCodingKeys.self)
-        
-        customCollections = try container.decode([CustomCollectionModel].self, forKey: .customCollections)
-    }
-}
-
 public struct CustomCollectionModel {
     
     // MARK: - Public Properties

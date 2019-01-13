@@ -32,6 +32,8 @@ struct NetworkManager {
     let router = Router<ShopifyApi>()
     
     public typealias CustomCollectionCompeltion = (_ collections: [CustomCollectionModel]?,_ error: String?) -> ()
+    public typealias CollectsCompeltion = (_ collections: [CollectModel]?,_ error: String?) -> ()
+    public typealias ProductsCompeltion = (_ products: [ProductModel]?,_ error: String?) -> ()
     
     func getCustomCollections(page: Int, completion: @escaping CustomCollectionCompeltion) {
         router.request(.customCollections(page: page, accessToken: NetworkManager.ShopifyApiKey)) { (data, response, error) in
@@ -48,10 +50,63 @@ struct NetworkManager {
                         return
                     }
                     do {
-                        let jsonData = try JSONSerialization.jsonObject(with: responseData, options: .mutableContainers)
                         let apiResponse = try JSONDecoder().decode(CustomCollectionApiResponse.self, from: responseData)
                         completion(apiResponse.customCollections,nil)
-                    }catch {
+                    } catch {
+                        completion(nil, NetworkResponse.unableToDecode.rawValue)
+                    }
+                case .failure(let networkFailureError):
+                    completion(nil, networkFailureError)
+                }
+            }
+        }
+    }
+    
+    func getCollects(collectionId: Int, page: Int, completion: @escaping CollectsCompeltion) {
+        router.request(.collects(collectionId: collectionId, page: page, accessToken: NetworkManager.ShopifyApiKey)) { (data, response, error) in
+            if error != nil {
+                completion(nil, "Please check your network connection.")
+            }
+            
+            if let response = response as? HTTPURLResponse {
+                let result = self.handleNetworkResponse(response)
+                switch result {
+                case .success:
+                    guard let responseData = data else {
+                        completion(nil, NetworkResponse.noData.rawValue)
+                        return
+                    }
+                    do {
+                        let apiResponse = try JSONDecoder().decode(CollectsApiResponse.self, from: responseData)
+                        completion(apiResponse.collects,nil)
+                    } catch {
+                        completion(nil, NetworkResponse.unableToDecode.rawValue)
+                    }
+                case .failure(let networkFailureError):
+                    completion(nil, networkFailureError)
+                }
+            }
+        }
+    }
+    
+    func getProducts(productIds: [Int], page: Int, completion: @escaping ProductsCompeltion) {
+        router.request(.products(ids: productIds, page: page, accessToken: NetworkManager.ShopifyApiKey)) { (data, response, error) in
+            if error != nil {
+                completion(nil, "Please check your network connection.")
+            }
+            
+            if let response = response as? HTTPURLResponse {
+                let result = self.handleNetworkResponse(response)
+                switch result {
+                case .success:
+                    guard let responseData = data else {
+                        completion(nil, NetworkResponse.noData.rawValue)
+                        return
+                    }
+                    do {
+                        let apiResponse = try JSONDecoder().decode(ProductsApiResponse.self, from: responseData)
+                        completion(apiResponse.products,nil)
+                    } catch {
                         completion(nil, NetworkResponse.unableToDecode.rawValue)
                     }
                 case .failure(let networkFailureError):

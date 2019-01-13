@@ -28,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if let initialViewController = AppStoryboard.Main.initialViewController() {
             navigationController.viewControllers = [initialViewController]
         } else {
-            navigationController.viewControllers = [UIViewController()]
+            fatalError("Cannot find the initial view controller")
         }
         
         self.window?.rootViewController = navigationController

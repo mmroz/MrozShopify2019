@@ -72,10 +72,9 @@ class CustomCollectionTableViewController: UITableViewController {
             imageLibrary.image(at: customCollection.image.src) { (image, error) in
                 self.imageCache[customCollection] = image
                 cell.imageView?.image = image
-                cell.layoutSubviews()
+                cell.setNeedsLayout()
             }
         }
-        
         return cell
     }
     
@@ -88,12 +87,17 @@ class CustomCollectionTableViewController: UITableViewController {
     
     // MARK: - Navigation
     
-    /// Initializes the the customCollectionsArray and reloads the table view
+    /// Navigates to CollectionDetailTableViewController with the CustomCollectionModel to detail
     /// - Parameters:
     ///   - pageNumber: The page to query defaults to page 1
     private func navigateToCollectionDetailVC(customCollection: CustomCollectionModel) {
         if let navigationController = self.navigationController {
             let detailVC = CollectionDetailTableViewController.instantiate(fromAppStoryboard: .Main)
+            
+            detailVC.initializeProducts(customCollectionId: customCollection.id)
+            detailVC.collection = customCollection
+            detailVC.collectionImage = imageCache[customCollection]
+            
             navigationController.pushViewController(detailVC, animated: true)
         }
     }

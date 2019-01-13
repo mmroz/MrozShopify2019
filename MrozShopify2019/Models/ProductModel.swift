@@ -21,7 +21,7 @@ public struct ProductModel {
     public var handle: String
     public var updatedAt: Date
     public var publishedAt: Date
-    public var templateSuffix: String
+    public var templateSuffix: String?
     public var tags: String
     public var publishedScope: String
     public var adminGraphqlApiId: String
@@ -42,7 +42,7 @@ public struct ProductModel {
         handle: String,
         updatedAt: Date,
         publishedAt: Date,
-        templateSuffix: String,
+        templateSuffix: String?,
         tags: String,
         publishedScope: String,
         adminGraphqlApiId: String,
@@ -68,6 +68,12 @@ public struct ProductModel {
         self.options = options
         self.images = images
         self.image = image
+    }
+    
+    // MARK: - Derived Properties
+    
+    public var totalInventory : Int {
+        return variants.reduce(0, { $0 + $1.inventoryQuantity})
     }
 }
 
@@ -111,7 +117,7 @@ extension ProductModel: Decodable {
         self.handle = try productContainer.decode(String.self, forKey: .handle)
         self.updatedAt = try Constants.httpDateFormat.date(from: productContainer.decode(String.self, forKey: .updatedAt)) ?? Date()
         self.publishedAt = try Constants.httpDateFormat.date(from: productContainer.decode(String.self, forKey: .publishedAt)) ?? Date()
-        self.templateSuffix = try productContainer.decode(String.self, forKey: .templateSuffix)
+        self.templateSuffix = try productContainer.decode(String?.self, forKey: .templateSuffix)
         self.tags = try productContainer.decode(String.self, forKey: .tags)
         self.publishedScope = try productContainer.decode(String.self, forKey: .publishedScope)
         self.adminGraphqlApiId = try productContainer.decode(String.self, forKey: .adminGraphqlApiId)

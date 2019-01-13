@@ -14,7 +14,7 @@ public enum ShopifyApi {
     /// The routing for the collects
     case collects(collectionId: Int, page: Int, accessToken: String)
     /// The routing for the products
-    case products(ids: [String], page: Int, accessToken: String)
+    case products(ids: [Int], page: Int, accessToken: String)
 }
 
 // MARK: - EndPointType
@@ -64,7 +64,7 @@ extension ShopifyApi: EndPointType {
             case .products(let produceIds, let pageNumber, let accessToken):
                 return .requestWithParameters(
                     urlParameters: [
-                        (name: "ids" , value:  produceIds.joined(separator: ",")),
+                        (name: "ids" , value:  produceIds.map({String($0)}).joined(separator: ",") ),
                         (name: "page", value: pageNumber ),
                         (name: "access_token", value: accessToken)
                     ], encoding: .urlPercentageEncoding
