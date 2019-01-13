@@ -56,7 +56,7 @@ extension ImageModel: Decodable {
         let imageContainer = try decoder.container(keyedBy: ImageModelCodingKeys.self)
         
         self.createdAt = try Constants.httpDateFormat.date(from: imageContainer.decode(String.self, forKey: .createdAt)) ?? Date()
-        self.alt = try imageContainer.decode(URL.self, forKey: .alt)
+        self.alt = try imageContainer.decode(URL?.self, forKey: .alt)
         self.width = try imageContainer.decode(CGFloat.self, forKey: .width)
         self.height = try imageContainer.decode(CGFloat.self, forKey: .height)
         self.src = try imageContainer.decode(URL.self, forKey: .src)

@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E466FDF721EB84EC00968F0A /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = E466FDF621EB84EC00968F0A /* HTTPMethod.swift */; };
+		E466FDF921EB851500968F0A /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E466FDF821EB851500968F0A /* HTTPTask.swift */; };
+		E466FDFB21EB857200968F0A /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E466FDFA21EB857200968F0A /* EndPointType.swift */; };
+		E466FDFD21EB873C00968F0A /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = E466FDFC21EB873C00968F0A /* Router.swift */; };
+		E466FDFF21EB8B5100968F0A /* ParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E466FDFE21EB8B5100968F0A /* ParameterEncoder.swift */; };
+		E466FE0121EB8BC100968F0A /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = E466FE0021EB8BC100968F0A /* ParameterEncoding.swift */; };
+		E466FE0321EB90F000968F0A /* ShopfiyApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = E466FE0221EB90F000968F0A /* ShopfiyApi.swift */; };
+		E466FE0521EB942100968F0A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E466FE0421EB942100968F0A /* NetworkManager.swift */; };
 		E48F0A8C21EA4AD2007BCEF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48F0A8B21EA4AD2007BCEF0 /* AppDelegate.swift */; };
 		E48F0A9121EA4AD2007BCEF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E48F0A8F21EA4AD2007BCEF0 /* Main.storyboard */; };
 		E48F0A9421EA4AD2007BCEF0 /* MrozShopify2019.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E48F0A9221EA4AD2007BCEF0 /* MrozShopify2019.xcdatamodeld */; };
@@ -45,6 +53,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E466FDF621EB84EC00968F0A /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		E466FDF821EB851500968F0A /* HTTPTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
+		E466FDFA21EB857200968F0A /* EndPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
+		E466FDFC21EB873C00968F0A /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		E466FDFE21EB8B5100968F0A /* ParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoder.swift; sourceTree = "<group>"; };
+		E466FE0021EB8BC100968F0A /* ParameterEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
+		E466FE0221EB90F000968F0A /* ShopfiyApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopfiyApi.swift; sourceTree = "<group>"; };
+		E466FE0421EB942100968F0A /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		E48F0A8821EA4AD2007BCEF0 /* MrozShopify2019.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MrozShopify2019.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E48F0A8B21EA4AD2007BCEF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E48F0A9021EA4AD2007BCEF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -96,6 +112,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E466FDF221EB823B00968F0A /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				E466FDF621EB84EC00968F0A /* HTTPMethod.swift */,
+				E466FDF821EB851500968F0A /* HTTPTask.swift */,
+				E466FDFA21EB857200968F0A /* EndPointType.swift */,
+				E466FDFC21EB873C00968F0A /* Router.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		E466FDF321EB824700968F0A /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				E466FE0421EB942100968F0A /* NetworkManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		E466FDF421EB835000968F0A /* EndPoint */ = {
+			isa = PBXGroup;
+			children = (
+				E466FE0221EB90F000968F0A /* ShopfiyApi.swift */,
+			);
+			path = EndPoint;
+			sourceTree = "<group>";
+		};
+		E466FDF521EB84CE00968F0A /* Encoding */ = {
+			isa = PBXGroup;
+			children = (
+				E466FDFE21EB8B5100968F0A /* ParameterEncoder.swift */,
+				E466FE0021EB8BC100968F0A /* ParameterEncoding.swift */,
+			);
+			path = Encoding;
+			sourceTree = "<group>";
+		};
 		E48F0A7F21EA4AD2007BCEF0 = {
 			isa = PBXGroup;
 			children = (
@@ -202,6 +254,10 @@
 		E48F0AD721EA8DAE007BCEF0 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				E466FDF521EB84CE00968F0A /* Encoding */,
+				E466FDF421EB835000968F0A /* EndPoint */,
+				E466FDF321EB824700968F0A /* Manager */,
+				E466FDF221EB823B00968F0A /* Service */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -337,15 +393,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E466FDFD21EB873C00968F0A /* Router.swift in Sources */,
+				E466FDFB21EB857200968F0A /* EndPointType.swift in Sources */,
 				E48F0ACB21EA6F00007BCEF0 /* ProductOptionModel.swift in Sources */,
+				E466FE0521EB942100968F0A /* NetworkManager.swift in Sources */,
 				E48F0ACD21EA70FA007BCEF0 /* ProductImageModel.swift in Sources */,
+				E466FDF721EB84EC00968F0A /* HTTPMethod.swift in Sources */,
 				E48F0AC021EA4B80007BCEF0 /* CollectModel.swift in Sources */,
 				E48F0AC221EA501F007BCEF0 /* ProductModel.swift in Sources */,
+				E466FE0321EB90F000968F0A /* ShopfiyApi.swift in Sources */,
 				E48F0AD621EA8CD5007BCEF0 /* CustomCollectionTableViewController.swift in Sources */,
+				E466FDF921EB851500968F0A /* HTTPTask.swift in Sources */,
 				E48F0AD021EA84D7007BCEF0 /* AppStoryboard.swift in Sources */,
 				E48F0A9421EA4AD2007BCEF0 /* MrozShopify2019.xcdatamodeld in Sources */,
 				E48F0AC721EA53EC007BCEF0 /* Constants.swift in Sources */,
+				E466FDFF21EB8B5100968F0A /* ParameterEncoder.swift in Sources */,
 				E48F0AC921EA629B007BCEF0 /* ProductVariantModel.swift in Sources */,
+				E466FE0121EB8BC100968F0A /* ParameterEncoding.swift in Sources */,
 				E48F0AD221EA85B7007BCEF0 /* UIViewController+StoryboardID.swift in Sources */,
 				E48F0ABE21EA4AEA007BCEF0 /* CustomCollectionModel.swift in Sources */,
 				E48F0A8C21EA4AD2007BCEF0 /* AppDelegate.swift in Sources */,

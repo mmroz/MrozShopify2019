@@ -12,6 +12,10 @@ class CustomCollectionTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        NetworkManager().getCustomCollections(page: 1) { (collections, error) in
+            print(collections)
+        }
     }
 
     // MARK: - Table view data source
