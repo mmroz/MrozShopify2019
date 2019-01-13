@@ -9,11 +9,17 @@
 import UIKit
 import CoreData
 
+// MARK: - Global properties
+
+/// The network manager for making API requests
+let networkManager : NetworkManager = NetworkManager()
+/// The image libabary for cachaing images
+let imageLibrary : ImageLibrary = ImageLibrary()
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         

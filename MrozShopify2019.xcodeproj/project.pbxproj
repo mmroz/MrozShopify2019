@@ -15,6 +15,8 @@
 		E466FE0121EB8BC100968F0A /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = E466FE0021EB8BC100968F0A /* ParameterEncoding.swift */; };
 		E466FE0321EB90F000968F0A /* ShopfiyApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = E466FE0221EB90F000968F0A /* ShopfiyApi.swift */; };
 		E466FE0521EB942100968F0A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E466FE0421EB942100968F0A /* NetworkManager.swift */; };
+		E466FE0721EBB03700968F0A /* CollectionDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E466FE0621EBB03700968F0A /* CollectionDetailTableViewController.swift */; };
+		E466FE0D21EBBD7900968F0A /* ImageLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = E466FE0C21EBBD7900968F0A /* ImageLibrary.swift */; };
 		E48F0A8C21EA4AD2007BCEF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48F0A8B21EA4AD2007BCEF0 /* AppDelegate.swift */; };
 		E48F0A9121EA4AD2007BCEF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E48F0A8F21EA4AD2007BCEF0 /* Main.storyboard */; };
 		E48F0A9421EA4AD2007BCEF0 /* MrozShopify2019.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E48F0A9221EA4AD2007BCEF0 /* MrozShopify2019.xcdatamodeld */; };
@@ -61,6 +63,8 @@
 		E466FE0021EB8BC100968F0A /* ParameterEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
 		E466FE0221EB90F000968F0A /* ShopfiyApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopfiyApi.swift; sourceTree = "<group>"; };
 		E466FE0421EB942100968F0A /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		E466FE0621EBB03700968F0A /* CollectionDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionDetailTableViewController.swift; sourceTree = "<group>"; };
+		E466FE0C21EBBD7900968F0A /* ImageLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLibrary.swift; sourceTree = "<group>"; };
 		E48F0A8821EA4AD2007BCEF0 /* MrozShopify2019.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MrozShopify2019.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E48F0A8B21EA4AD2007BCEF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E48F0A9021EA4AD2007BCEF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -148,6 +152,14 @@
 			path = Encoding;
 			sourceTree = "<group>";
 		};
+		E466FE0B21EBBD5D00968F0A /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				E466FE0C21EBBD7900968F0A /* ImageLibrary.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
 		E48F0A7F21EA4AD2007BCEF0 = {
 			isa = PBXGroup;
 			children = (
@@ -173,6 +185,7 @@
 			children = (
 				E48F0A8B21EA4AD2007BCEF0 /* AppDelegate.swift */,
 				E48F0ACF21EA84D7007BCEF0 /* AppStoryboard.swift */,
+				E466FE0B21EBBD5D00968F0A /* Core */,
 				E48F0ACE21EA8479007BCEF0 /* Extensions */,
 				E48F0AC521EA53DF007BCEF0 /* Constants */,
 				E48F0ABC21EA4AD8007BCEF0 /* Models */,
@@ -247,6 +260,7 @@
 			isa = PBXGroup;
 			children = (
 				E48F0AD521EA8CD5007BCEF0 /* CustomCollectionTableViewController.swift */,
+				E466FE0621EBB03700968F0A /* CollectionDetailTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -393,6 +407,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E466FE0721EBB03700968F0A /* CollectionDetailTableViewController.swift in Sources */,
 				E466FDFD21EB873C00968F0A /* Router.swift in Sources */,
 				E466FDFB21EB857200968F0A /* EndPointType.swift in Sources */,
 				E48F0ACB21EA6F00007BCEF0 /* ProductOptionModel.swift in Sources */,
@@ -409,6 +424,7 @@
 				E48F0AC721EA53EC007BCEF0 /* Constants.swift in Sources */,
 				E466FDFF21EB8B5100968F0A /* ParameterEncoder.swift in Sources */,
 				E48F0AC921EA629B007BCEF0 /* ProductVariantModel.swift in Sources */,
+				E466FE0D21EBBD7900968F0A /* ImageLibrary.swift in Sources */,
 				E466FE0121EB8BC100968F0A /* ParameterEncoding.swift in Sources */,
 				E48F0AD221EA85B7007BCEF0 /* UIViewController+StoryboardID.swift in Sources */,
 				E48F0ABE21EA4AEA007BCEF0 /* CustomCollectionModel.swift in Sources */,

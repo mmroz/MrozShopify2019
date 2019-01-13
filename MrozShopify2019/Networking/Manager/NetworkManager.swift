@@ -58,7 +58,6 @@ struct NetworkManager {
                     completion(nil, networkFailureError)
                 }
             }
-
         }
     }
 

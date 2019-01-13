@@ -16,4 +16,9 @@ public struct Constants {
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         return dateFormatter
     }
+    
+    /// Cell identifiers used in the project
+    struct CellIdentifiers {
+        static let customCollectionCellIdentifier = "CustomCollectionCell"
+    }
 }

@@ -108,3 +108,21 @@ extension CustomCollectionModel: Decodable {
         self.image =  try customCollectionContainer.decode(ImageModel.self, forKey: .image)
     }
 }
+
+// MARK: - Hashable
+
+extension CustomCollectionModel: Hashable {
+    
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+}
+
+// MARK: - Equitable
+
+extension CustomCollectionModel: Equatable {
+    
+    public static func == (lhs: CustomCollectionModel, rhs: CustomCollectionModel) -> Bool {
+        return lhs.id == rhs.id
+    }
+}
