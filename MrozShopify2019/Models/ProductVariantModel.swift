@@ -11,7 +11,6 @@ import Foundation
 public struct ProductVariantModel {
     
     // MARK: - Public Properties
-    // TODO - should this int?
     public var id: Int
     public var productId: Int
     public var title: String
@@ -26,7 +25,6 @@ public struct ProductVariantModel {
     public var updatedAt: Date
     public var taxable: Bool
     public var barcode: String?
-    // TODO - should this int?
     public var grams: Int
     public var imageId: Int?
     public var weight: Double

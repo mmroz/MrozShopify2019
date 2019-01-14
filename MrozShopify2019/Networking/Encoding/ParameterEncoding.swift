@@ -8,7 +8,6 @@
 
 import Foundation
 
-// TODO -  check this
 enum ParameterEncodingError: Error {
     /// An error occurred retrieving the image from the network.
     case networkError(Error)

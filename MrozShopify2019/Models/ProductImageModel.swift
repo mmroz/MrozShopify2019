@@ -9,7 +9,6 @@
 import Foundation
 import UIKit
 
-// TODO - cannot subclass structs! - ImageModel
 public struct ProductImageModel {
     
     // MARK: - Public Properties

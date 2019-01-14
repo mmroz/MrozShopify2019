@@ -72,8 +72,6 @@ class CollectionDetailTableViewController: UITableViewController {
     ///   - customCollectionId: the custom collection to load details for
     
     public func initializeProducts(customCollectionId: Int) {
-        
-        // TODO - should I add cutom error handling here?
         networkManager.getCollects(collectionId: customCollectionId, page: 1) { (collects, error) in
             if error != nil {
                 return
@@ -83,7 +81,6 @@ class CollectionDetailTableViewController: UITableViewController {
                 let productIds = collects.map({ $0.productId })
                 
                 networkManager.getProducts(productIds: productIds, page: 1, completion: { (products, error) in
-                    // TODO - should I add cutom error handling here?
                     if error != nil {
                         return
                     }
