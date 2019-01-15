@@ -38,7 +38,7 @@ class Router<EndPoint: EndPointType>: NetworkRouter {
     ///   - timeoutInterval: The network timeout interval
     ///   - cachingPolicy: The network caching policy
     
-    init(timeoutInterval: Double, cachingPolicy: NSURLRequest.CachePolicy) {
+    init(timeoutInterval: Double = 10.0, cachingPolicy: NSURLRequest.CachePolicy = .reloadIgnoringCacheData) {
         self.timeoutInterval = timeoutInterval
         self.cachingPolicy = cachingPolicy
     }
