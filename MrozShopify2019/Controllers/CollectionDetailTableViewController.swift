@@ -117,6 +117,8 @@ class CollectionDetailTableViewController: UITableViewController {
     private func initializeTableView() {
         tableView.register(UINib(nibName: Constants.Nibs.productCellNib, bundle: nil), forCellReuseIdentifier: Constants.CellIdentifiers.productCellIdentifier)
         
+        tableView.backgroundColor = .black
+        
         if let collection = collection {
             let headerView = makeTableViewHeader(collection: collection)
             
@@ -165,6 +167,7 @@ class CollectionDetailTableViewController: UITableViewController {
         
         let headerHeight = max(imageView.frame.maxY, htmlContent.frame.maxY)
         let headerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: headerHeight))
+        headerView.backgroundColor = .white
         
         headerView.addSubview(imageView)
         headerView.addSubview(titleLabel)
