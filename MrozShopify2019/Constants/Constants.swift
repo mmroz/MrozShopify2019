@@ -14,6 +14,7 @@ public struct Constants {
     public static var httpDateFormat : DateFormatter {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        dateFormatter.timeZone = TimeZone(abbreviation: "GMT-05:00")
         return dateFormatter
     }
     

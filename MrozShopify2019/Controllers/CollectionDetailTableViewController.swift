@@ -42,9 +42,11 @@ class CollectionDetailTableViewController: UITableViewController {
         let product = productsArray[indexPath.row]
         
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.CellIdentifiers.productCellIdentifier, for: indexPath) as! ProductTableViewCell
-        cell.nameLabel.text = product.title
-        cell.collectionNameLabel.text = collection?.title
-        cell.inventoryLabel.text = String(product.totalInventory)
+        cell.backgroundColor = .black
+        
+        cell.nameLabel.attributedText = NSAttributedString(string: product.title, attributes: [NSAttributedString.Key.foregroundColor : UIColor.white])
+        cell.collectionNameLabel.attributedText = NSAttributedString(string: collection?.title ?? "", attributes: [NSAttributedString.Key.foregroundColor : UIColor.white])
+        cell.inventoryLabel.attributedText = NSAttributedString(string: String(product.totalInventory), attributes: [NSAttributedString.Key.foregroundColor : UIColor.white])
         
         if let collectionImage = collectionImage {
             cell.collectionImageView.image = collectionImage

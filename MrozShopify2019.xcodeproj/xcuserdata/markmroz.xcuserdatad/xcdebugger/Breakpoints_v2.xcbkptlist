@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MrozShopify2019/Controllers/CollectionDetailTableViewController.swift"
-            timestampString = "569115306.089709"
+            filePath = "MrozShopify2019/Models/CollectModel.swift"
+            timestampString = "569691996.663129"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "173"
-            endingLineNumber = "173"
-            landmarkName = "makeTableViewHeader(collection:)"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "init(from:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
